@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Online Test</title>
+</head>
+<body>
+    <div class="welcome-window">
+        <h1>Welcome to <span>Online-Test</span></h1>
+        <p>Read all the instructions before start the test.</p>
+        <ol id="instructions-list">
+            <li>You will have 10 questions to attempt.</li>
+            <li>Each question will has 4 options.</li>
+            <li>Each question carry 4 marks.</li>
+            <li>You will have 10 minutes to attempt all the questions.</li>
+            <li>Don't close the window before submitting the test.</li>
+        </ol>
+        <button id="start-test" class="btn">Start Test</button>
+    </div>
+    <div class="test-window" style="display: none;">
+        <div class="question-viewer">
+
+        </div>
+        <div class="question-explorer">
+            <div class="timer" id="timer">
+                Time Left
+            </div>
+            <div class="indicator">
+                <button class="indicate-review"></button>
+                <p>Questions marked for Review</p>
+            </div>
+            <div class="indicator">
+                <button class="indicate-attempted"></button>
+                <p>Questions visited / attempted</p>
+            </div>
+            <div class="indicator">
+                <button class="indicate-visited"></button>
+                <p>Questions visited / not attempted</p>
+            </div>
+            <div class="indicator" style="margin-bottom: 2rem;">
+                <button class="indicate-not-visited"></button>
+                <p>Questions not visited</p>
+            </div>
+        </div>
+        <div class="question-navigator">
+            <button id="review">Review</button>
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+            <button id="submit-test">Submit</button>
+        </div>
+    </div>
+    <div class="score-window" style="display: none;">
+        <h1>ScoreBoard</h1>
+        <p id="attempted">No. of questions attempted : </p>
+        <p id="attemptedCorrect">No. of questions attempted : </p>
+        <p id="attemptedWrong">No. of questions attempted : </p>
+        <p id="score">Your score : --/40</p>
+        <button id="close-test" class="btn">close</button>
+    </div>
+  </body>
+  <script src="js/index.js"></script>
+</html>

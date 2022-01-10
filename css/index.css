@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #293559;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.indicator{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5rem 0.5rem;
+}
+.indicator p{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0rem;
+}
+.indicator button{
+    height: 1.5rem;
+    width: 1.5rem;
+    font-weight: bold;
+    border: none;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+}
+.indicator button.indicate-review{
+    background-color: #6d7bfc;
+}
+.indicator button.indicate-attempted{
+    background-color: #c99d01;
+}
+.indicator button.indicate-visited{
+    background-color: #293559;
+}
+.indicator button.indicate-not-visited{
+    background-color: #918f89;
+}
+
+.test-window {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.question-navigator {
+    padding: 1rem;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1rem solid #293559;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.question-navigator button {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #293559;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+.question-navigator button#review{
+    background-color: #6d7bfc;
+    /* color: #293559; */
+}
+.question-navigator button#previous,
+.question-navigator button#next{
+    background-color: #293559;
+    /* color: #293559; */
+}
+.question-navigator button#previous.disabled,
+.question-navigator button#next.disabled{
+    background-color: #7a7a7a;
+}
+.question-navigator button.disabled:hover{
+    box-shadow: none;
+}
+.question-navigator button#submit-test{
+    background-color: #cc3232;
+    color: #fff;
+}
+.question-navigator button:hover{
+    box-shadow: 1px 5px 10px #918f89;
+}
+
+.question-viewer {
+    width: 75%;
+    overflow-y: auto;
+    background-color: #fff;
+    height: calc(100% - 5rem);
+    flex: 1 0 75%;
+    padding: 2rem;
+
+}
+.question-viewer .question{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0%;
+}
+.question-viewer .option{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    /* font-weight: bold; */
+    
+    margin: 0.7rem 0rem;
+}
+
+.question-explorer {
+    width: 25%;
+    overflow-y: auto;
+    background-color: #fff;
+    border-left: 2rem solid #293559;
+    height: calc(100% - 5rem);
+    flex: 1 0 25%;
+    padding: 1rem;
+}
+.question-explorer .timer{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    /* text-align: center; */
+    color: rgb(114, 221, 114);
+}
+.question-explorer .explorer-btn{
+    background-color: #918f89;
+    color: #fff;
+    height: 2rem;
+    width: 2rem;
+    font-weight: bold;
+    border: none;
+    margin: 0.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.question-explorer .explorer-btn.review{
+    background-color: #6d7bfc;
+}
+
+.question-explorer .explorer-btn.visited{
+    background-color: #293559;
+}
+
+.question-explorer .explorer-btn.attempted{
+    background-color: #c99d01;
+}
+
+.welcome-window {
+    height: auto;
+    width: 60%;
+    margin: 20vh auto;
+    padding: 2rem;
+    background-color: #fff;
+}
+.welcome-window h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.welcome-window p{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.welcome-window li{
+    /* text-align: center; */
+    font-size: 1.2rem;
+    margin: 0.3rem 1rem;
+}
+.welcome-window h1 span{
+    color: #c99d01;
+}
+
+
+.score-window {
+    height: auto;
+    width: 60%;
+    margin: 20vh auto;
+    padding: 2rem;
+    background-color: #fff;
+}
+.score-window h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+
+}
+.score-window p{
+    font-size: 1.8rem;
+    margin: 1rem 2rem;
+}
+.btn{
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #293559;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    box-shadow: 1px 5px 10px #636d8b;
+    background-color: #fff;
+    color: #293559;
+}
